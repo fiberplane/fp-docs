@@ -1,0 +1,545 @@
+/* Custom styles for cleaner, Vercel-inspired design */
+
+:root[data-theme='light'] {
+  /* Override Starlight's light mode colors for better contrast */
+  /* Note: Starlight inverts naming - "white" is dark text, "black" is light background in light mode */
+  --sl-color-white: hsl(0, 0%, 4%); /* Very dark text - almost black */
+  --sl-color-gray-1: hsl(0, 0%, 8%); /* Dark gray for headings */
+  --sl-color-gray-2: hsl(0, 0%, 16%); /* Darker gray */
+  --sl-color-gray-3: hsl(0, 0%, 32%); /* Medium-dark gray for body text */
+  --sl-color-gray-4: hsl(0, 0%, 52%); /* Medium gray for secondary text */
+  --sl-color-gray-5: hsl(0, 0%, 73%); /* Light gray */
+  --sl-color-gray-6: hsl(0, 0%, 96%); /* Very light gray for backgrounds */
+  --sl-color-gray-7: hsl(0, 0%, 98%); /* Almost white for backgrounds */
+  --sl-color-black: hsl(0, 0%, 100%); /* Pure white background */
+
+  /* Accent colors - Vercel-inspired blue */
+  --sl-color-accent-high: hsl(212, 100%, 45%); /* Dark blue for text/links */
+  --sl-color-accent: hsl(212, 100%, 50%); /* Medium blue */
+  --sl-color-accent-low: hsl(212, 100%, 96%); /* Very light blue for backgrounds */
+
+  /* Derived colors */
+  --sl-color-text: var(--sl-color-gray-3); /* Body text - dark gray */
+  --sl-color-text-accent: var(--sl-color-accent-high); /* Link color - dark blue */
+  --sl-color-bg: var(--sl-color-black); /* Page background - white */
+  --sl-color-bg-nav: var(--sl-color-black); /* Nav background - white */
+  --sl-color-bg-sidebar: hsl(0, 0%, 99%); /* Sidebar - almost pure white like Vercel */
+  --sl-color-hairline-light: var(--sl-color-gray-6); /* Light borders */
+  --sl-color-hairline: var(--sl-color-gray-5); /* Borders */
+}
+
+:root[data-theme='dark'] {
+  /* Dark mode improvements */
+  --sl-color-white: hsl(0, 0%, 98%); /* Very light text */
+  --sl-color-gray-1: hsl(0, 0%, 92%); /* Light gray headings */
+  --sl-color-gray-2: hsl(0, 0%, 82%); /* Light gray */
+  --sl-color-gray-3: hsl(0, 0%, 65%); /* Medium gray for body text */
+  --sl-color-gray-4: hsl(0, 0%, 48%); /* Medium-dark gray */
+  --sl-color-gray-5: hsl(0, 0%, 24%); /* Dark gray */
+  --sl-color-gray-6: hsl(0, 0%, 12%); /* Dark for active backgrounds */
+  --sl-color-black: hsl(0, 0%, 0%); /* Pure black background */
+
+  /* Accent colors for dark mode */
+  --sl-color-accent-high: hsl(212, 100%, 70%); /* Light blue for links */
+  --sl-color-accent: hsl(212, 100%, 60%); /* Medium blue */
+  --sl-color-accent-low: hsl(212, 100%, 15%); /* Very dark blue */
+
+  /* Derived colors for dark mode */
+  --sl-color-text: var(--sl-color-gray-2);
+  --sl-color-text-accent: var(--sl-color-accent-high);
+  --sl-color-bg: hsl(0, 0%, 5%); /* Very dark gray background, not pure black */
+  --sl-color-bg-nav: hsl(0, 0%, 5%); /* Nav background */
+  --sl-color-bg-sidebar: hsl(0, 0%, 3%); /* Sidebar - slightly darker */
+}
+
+/* Typography improvements */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--sl-color-white) !important; /* In light mode, this is now dark text */
+  font-weight: 700 !important;
+  line-height: 1.3 !important;
+  letter-spacing: -0.02em !important;
+}
+
+/* Body text */
+p {
+  color: var(--sl-color-gray-3) !important; /* Dark gray body text */
+  line-height: 1.7 !important;
+}
+
+/* Links - better blue */
+a:not(.social-icon) {
+  color: var(--sl-color-text-accent) !important;
+  font-weight: 500;
+}
+
+a:hover:not(.social-icon) {
+  color: var(--sl-color-accent) !important;
+}
+
+/* List items */
+li {
+  color: var(--sl-color-gray-3) !important;
+  line-height: 1.7 !important;
+}
+
+/* Sidebar navigation */
+.sidebar-pane {
+  background-color: var(--sl-color-bg-sidebar) !important;
+}
+
+.sidebar a {
+  color: var(--sl-color-gray-2) !important;
+  font-weight: 500;
+}
+
+.sidebar a:hover {
+  color: var(--sl-color-white) !important;
+}
+
+.sidebar a[aria-current="page"] {
+  color: var(--sl-color-text-accent) !important;
+  font-weight: 600 !important;
+}
+
+/* Site title */
+.site-title a {
+  color: var(--sl-color-white) !important;
+  font-weight: 700 !important;
+}
+
+/* Table of contents (right sidebar) - Vercel-style */
+.right-sidebar h2 {
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  color: var(--sl-color-gray-4) !important;
+  margin-bottom: 0.75rem !important;
+}
+
+.right-sidebar a {
+  color: var(--sl-color-gray-4) !important;
+  font-size: 0.8125rem !important;
+  line-height: 1.6 !important;
+  font-weight: 400 !important;
+}
+
+.right-sidebar a:hover,
+.right-sidebar a[aria-current="true"] {
+  color: var(--sl-color-white) !important;
+}
+
+/* Code blocks - white/very light background like Vercel (light mode) */
+code {
+  background-color: hsl(0, 0%, 100%) !important;
+  border: 1px solid hsl(0, 0%, 90%) !important;
+  color: var(--sl-color-gray-1) !important;
+}
+
+pre {
+  background-color: hsl(0, 0%, 99%) !important;
+  border: 1px solid hsl(0, 0%, 90%) !important;
+}
+
+/* Code blocks - dark mode */
+:root[data-theme='dark'] code {
+  background-color: hsl(0, 0%, 10%) !important;
+  border: 1px solid hsl(0, 0%, 20%) !important;
+  color: hsl(0, 0%, 90%) !important;
+}
+
+:root[data-theme='dark'] pre {
+  background-color: hsl(0, 0%, 8%) !important;
+  border: 1px solid hsl(0, 0%, 20%) !important;
+}
+
+:root[data-theme='dark'] pre code {
+  background-color: transparent !important;
+  border: none !important;
+}
+
+/* Remove excessive shadows */
+.header {
+  box-shadow: none !important;
+}
+
+/* Logo styling - make smaller and invert in light mode */
+.site-title img {
+  height: auto !important;
+  width: 100px !important;
+  max-width: 100px !important;
+}
+
+/* Hide the "Fiberplane" text, only show logo */
+.site-title span {
+  display: none !important;
+}
+
+/* Invert logo colors in light mode */
+:root[data-theme='light'] .site-title img {
+  filter: invert(1) !important;
+}
+
+/* Improve spacing */
+.sl-markdown-content {
+  line-height: 1.7;
+}
+
+/* Better contrast for all main content */
+main {
+  color: var(--sl-color-text);
+}
+
+/* Starlight Asides (Callouts) - Improved styling */
+.starlight-aside {
+  padding: 1rem 1.25rem !important;
+  border-inline-start-width: 3px !important;
+  border-radius: 0.5rem !important;
+  margin: 1.5rem 0 !important;
+}
+
+/* Note aside - Purple/Blue theme */
+.starlight-aside--note {
+  --sl-color-asides-text-accent: #6B63FF !important;
+  --sl-color-asides-border: #A29FFF !important;
+  background-color: #DDDBFF !important;
+  border-color: #A29FFF !important;
+}
+
+/* Tip aside - Pink theme */
+.starlight-aside--tip {
+  --sl-color-asides-text-accent: #E64AA3 !important;
+  --sl-color-asides-border: #F591C8 !important;
+  background-color: #F8D2E8 !important;
+  border-color: #F591C8 !important;
+}
+
+/* Caution aside - Yellow theme */
+.starlight-aside--caution {
+  --sl-color-asides-text-accent: #D4A017 !important;
+  --sl-color-asides-border: #EBC75E !important;
+  background-color: #F7DD91 !important;
+  border-color: #EBC75E !important;
+}
+
+/* Danger aside - Red/Orange theme */
+.starlight-aside--danger {
+  --sl-color-asides-text-accent: #E85D4A !important;
+  --sl-color-asides-border: #FF9B8A !important;
+  background-color: #FFE6E0 !important;
+  border-color: #FF9B8A !important;
+}
+
+/* Success/Check aside - Green theme (custom variant) */
+.starlight-aside--success,
+.starlight-aside--check {
+  --sl-color-asides-text-accent: #5B8C2E !important;
+  --sl-color-asides-border: #8FBD5F !important;
+  background-color: #D1EAAC !important;
+  border-color: #8FBD5F !important;
+}
+
+/* Aside title styling */
+.starlight-aside__title {
+  font-size: 0.9375rem !important;
+  font-weight: 600 !important;
+  color: var(--sl-color-asides-text-accent) !important;
+  margin-bottom: 0.5rem !important;
+}
+
+/* Aside content text */
+.starlight-aside__content {
+  color: var(--sl-color-gray-3) !important;
+  line-height: 1.6 !important;
+}
+
+/* Aside links */
+.starlight-aside__content a {
+  color: var(--sl-color-asides-text-accent) !important;
+  font-weight: 500 !important;
+}
+
+/* Aside code blocks */
+.starlight-aside__content code {
+  background-color: rgba(0, 0, 0, 0.05) !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Dark mode asides */
+:root[data-theme='dark'] .starlight-aside--note {
+  --sl-color-asides-text-accent: #B8B5FF !important;
+  --sl-color-asides-border: #6B63FF !important;
+  background-color: #1A1830 !important;
+  border-color: #6B63FF !important;
+}
+
+:root[data-theme='dark'] .starlight-aside--tip {
+  --sl-color-asides-text-accent: #FFB8E0 !important;
+  --sl-color-asides-border: #E64AA3 !important;
+  background-color: #2A1420 !important;
+  border-color: #E64AA3 !important;
+}
+
+:root[data-theme='dark'] .starlight-aside--caution {
+  --sl-color-asides-text-accent: #FFE5A0 !important;
+  --sl-color-asides-border: #D4A017 !important;
+  background-color: #2A2410 !important;
+  border-color: #D4A017 !important;
+}
+
+:root[data-theme='dark'] .starlight-aside--danger {
+  --sl-color-asides-text-accent: #FFB8AA !important;
+  --sl-color-asides-border: #E85D4A !important;
+  background-color: #2A1410 !important;
+  border-color: #E85D4A !important;
+}
+
+:root[data-theme='dark'] .starlight-aside--success,
+:root[data-theme='dark'] .starlight-aside--check {
+  --sl-color-asides-text-accent: #B8E896 !important;
+  --sl-color-asides-border: #5B8C2E !important;
+  background-color: #182A10 !important;
+  border-color: #5B8C2E !important;
+}
+
+:root[data-theme='dark'] .starlight-aside__content {
+  color: var(--sl-color-gray-2) !important;
+}
+
+:root[data-theme='dark'] .starlight-aside__content code {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Sidebar improvements - Vercel-inspired minimal design */
+/* Simple left border for active link with subtle background */
+.sidebar a[aria-current="page"] {
+  background-color: var(--sl-color-gray-6) !important;
+  color: var(--sl-color-white) !important;
+  font-weight: 500 !important;
+  border-left: 1px solid var(--sl-color-white) !important;
+  padding-left: calc(0.75rem - 1px) !important;
+  padding-right: 0.75rem !important;
+  padding-block: 0.375rem !important;
+  border-radius: 0 !important;
+  font-size: 0.8125rem !important;
+  line-height: 1.4 !important;
+  transition: none !important;
+}
+
+/* Active link hover - keep exact same styling, no transitions */
+.sidebar a[aria-current="page"]:hover {
+  background-color: var(--sl-color-gray-6) !important;
+  color: var(--sl-color-white) !important;
+  font-weight: 500 !important;
+  border-left: 1px solid var(--sl-color-white) !important;
+  padding-left: calc(0.75rem - 1px) !important;
+  padding-right: 0.75rem !important;
+  padding-block: 0.375rem !important;
+  border-radius: 0 !important;
+  font-size: 0.8125rem !important;
+  line-height: 1.4 !important;
+  transition: none !important;
+}
+
+/* Normal sidebar links - minimal styling, smaller font */
+.sidebar a {
+  color: var(--sl-color-gray-3) !important;
+  padding-left: calc(0.75rem - 1px) !important;
+  padding-right: 0.75rem !important;
+  padding-block: 0.375rem !important;
+  transition: color 0.15s ease !important;
+  border-left: 1px solid transparent !important;
+  background-color: transparent !important;
+  border-radius: 0 !important;
+  font-size: 0.8125rem !important;
+  line-height: 1.4 !important;
+}
+
+/* Hover state - only change text color for NON-active links */
+.sidebar a:not([aria-current="page"]):hover {
+  color: var(--sl-color-white) !important;
+  background-color: transparent !important;
+  border-radius: 0 !important;
+  border-left: 1px solid transparent !important;
+  padding-left: calc(0.75rem - 1px) !important;
+  padding-right: 0.75rem !important;
+  padding-block: 0.375rem !important;
+  font-weight: inherit !important;
+}
+
+/* Sidebar group labels (summary) - minimal styling, smaller font */
+.sidebar summary {
+  color: var(--sl-color-white) !important;
+  font-weight: 600 !important;
+  padding: 0.375rem 0.75rem !important;
+  background-color: transparent !important;
+  font-size: 0.8125rem !important;
+  line-height: 1.4 !important;
+}
+
+/* Target the .large span inside summary to override its size */
+.sidebar summary .large {
+  font-size: 0.8125rem !important;
+}
+
+.sidebar summary:hover {
+  background-color: transparent !important;
+}
+
+/* Nested items indentation */
+.sidebar details ul {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+  border-left: none !important;
+}
+
+/* Remove default Starlight borders on nested list items to prevent gaps */
+.sidebar ul ul li {
+  margin-inline-start: 0 !important;
+  border-inline-start: none !important;
+  padding-inline-start: 0 !important;
+}
+
+/* Add continuous border to the entire nested list */
+.sidebar details ul {
+  border-left: 1px solid var(--sl-color-hairline-light) !important;
+  margin-left: 0.75rem !important;
+}
+
+/* Nested links get extra left padding to indent them */
+.sidebar details ul a {
+  padding-left: 0.75rem !important;
+  border-left: none !important;
+  font-size: 0.8125rem !important;
+  line-height: 1.4 !important;
+}
+
+/* Active nested links - use pseudo-element for border to overlay the gray line */
+.sidebar details ul a[aria-current="page"] {
+  position: relative !important;
+  padding-left: 0.75rem !important;
+  margin-left: 0 !important;
+  border-left: none !important;
+  background-color: var(--sl-color-gray-6) !important;
+  transition: none !important;
+}
+
+.sidebar details ul a[aria-current="page"]::before {
+  content: '' !important;
+  position: absolute !important;
+  left: -1px !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  width: 1px !important;
+  background-color: var(--sl-color-white) !important;
+}
+
+/* Active nested links on hover - keep everything the same */
+.sidebar details ul a[aria-current="page"]:hover {
+  padding-left: 0.75rem !important;
+  margin-left: 0 !important;
+  border-left: none !important;
+  background-color: var(--sl-color-gray-6) !important;
+  color: var(--sl-color-white) !important;
+  font-weight: 500 !important;
+  transition: none !important;
+}
+
+/* Nested links on hover - keep transparent border for NON-active links */
+.sidebar details ul a:not([aria-current="page"]):hover {
+  border-left: none !important;
+  padding-left: 0.75rem !important;
+  color: var(--sl-color-white) !important;
+  font-size: 0.8125rem !important;
+  line-height: 1.4 !important;
+  font-weight: inherit !important;
+}
+
+/* Level 3 nesting - deeper indentation */
+.sidebar details ul details ul {
+  margin-left: 0.75rem !important;
+  padding-left: 0 !important;
+  border-left: 1px solid var(--sl-color-hairline-light) !important;
+}
+
+/* Level 3 nested links (e.g., Tools under Core Concepts under MCP Lite) */
+.sidebar details ul details ul a {
+  padding-left: 0.75rem !important;
+  border-left: none !important;
+  font-size: 0.8125rem !important;
+  line-height: 1.4 !important;
+}
+
+/* Active level 3 nested links */
+.sidebar details ul details ul a[aria-current="page"] {
+  position: relative !important;
+  padding-left: 0.75rem !important;
+  margin-left: 0 !important;
+  border-left: none !important;
+  background-color: var(--sl-color-gray-6) !important;
+  transition: none !important;
+}
+
+.sidebar details ul details ul a[aria-current="page"]::before {
+  content: '' !important;
+  position: absolute !important;
+  left: -1px !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  width: 1px !important;
+  background-color: var(--sl-color-white) !important;
+}
+
+/* Active level 3 nested links on hover */
+.sidebar details ul details ul a[aria-current="page"]:hover {
+  padding-left: 0.75rem !important;
+  margin-left: 0 !important;
+  border-left: none !important;
+  background-color: var(--sl-color-gray-6) !important;
+  color: var(--sl-color-white) !important;
+  font-weight: 500 !important;
+  transition: none !important;
+}
+
+/* Level 3 nested links on hover - keep transparent border for NON-active links */
+.sidebar details ul details ul a:not([aria-current="page"]):hover {
+  border-left: none !important;
+  padding-left: 0.75rem !important;
+  color: var(--sl-color-white) !important;
+  font-size: 0.8125rem !important;
+  line-height: 1.4 !important;
+  font-weight: inherit !important;
+}
+
+/* Sidebar spacing */
+.sidebar li {
+  margin-bottom: 0.125rem !important;
+}
+
+/* Add horizontal line between top-level product sections */
+.sidebar ul.top-level > li:not(:last-child) {
+  border-bottom: 1px solid var(--sl-color-hairline-light) !important;
+  padding-bottom: 0.75rem !important;
+  margin-bottom: 0.75rem !important;
+}
+
+/* Dark mode adjustments */
+:root[data-theme='dark'] .sidebar a {
+  color: var(--sl-color-gray-2) !important;
+}
+
+:root[data-theme='dark'] .sidebar a:hover {
+  color: var(--sl-color-white) !important;
+  background-color: transparent !important;
+}
+
+:root[data-theme='dark'] .sidebar a[aria-current="page"] {
+  color: var(--sl-color-white) !important;
+  background-color: var(--sl-color-gray-6) !important;
+  border-left: 1px solid var(--sl-color-white) !important;
+}
+
+:root[data-theme='dark'] .sidebar summary:hover {
+  background-color: transparent !important;
+}

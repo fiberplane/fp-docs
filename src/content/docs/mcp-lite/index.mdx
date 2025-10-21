@@ -1,0 +1,101 @@
+---
+title: mcp-lite
+description: A small, fetch-first implementation of the Model Context Protocol (MCP) server APIs.
+---
+
+# mcp-lite
+
+A small, fetch-first implementation of the Model Context Protocol (MCP) server APIs.
+
+`mcp-lite` is a ground-up rewrite of the TypeScript MCP SDK. It keeps only the pieces you need to stand up a server: JSON-RPC handling, typed tool definitions, and an HTTP + SSE transport that works anywhere `Request` and `Response` are available (Node, Bun, Cloudflare Workers, Deno, browsers with Service Workers).
+
+## What You Get
+
+- **Minimal core** (`packages/core`) with zero runtime dependencies
+- **Opt-in adapters** for sessions and client calls so you can start without state and add storage when you need it
+- **Plain TypeScript APIs** that line up with the MCP spec and stay close to the wire format
+
+## Quick Start
+
+```bash
+npm install mcp-lite
+```
+
+Spin up a minimal MCP server with Hono and Zod:
+
+```typescript
+import { Hono } from "hono";
+import { McpServer, StreamableHttpTransport } from "mcp-lite";
+import { z } from "zod";
+
+const mcp = new McpServer({
+  name: "example-server",
+  version: "1.0.0",
+  schemaAdapter: (schema) => z.toJSONSchema(schema as z.ZodType),
+});
+
+const WeatherInputSchema = z.object({
+  location: z.string(),
+});
+
+const WeatherOutputSchema = z.object({
+  temperature: z.number(),
+  conditions: z.string(),
+});
+
+mcp.tool("getWeather", {
+  description: "Gets weather information for a location",
+  inputSchema: WeatherInputSchema,
+  outputSchema: WeatherOutputSchema,
+  handler: (args) => ({
+    content: [{
+      type: "text",
+      text: `Weather in ${args.location}: 22°C, sunny`
+    }],
+    structuredContent: {
+      temperature: 22,
+      conditions: "sunny",
+    },
+  }),
+});
+
+const transport = new StreamableHttpTransport();
+const httpHandler = transport.bind(mcp);
+
+const app = new Hono();
+app.all("/mcp", async (c) => {
+  const response = await httpHandler(c.req.raw);
+  return response;
+});
+```
+
+:::tip[What is MCP?]
+The Model Context Protocol (MCP) is an open standard that enables secure connections between host applications and external data sources and tools, allowing AI assistants to reason over information and execute functions with user permission.
+:::
+
+## Key Features
+
+- **No runtime dependencies** and a single TypeScript entrypoint
+- **Type-safe tool definitions** with Standard Schema (Zod, Valibot, Effect, ArkType)
+- **Structured outputs** with runtime validation and schema exposure via `tools/list`
+- **HTTP + SSE transport** built on the Fetch API
+- **Adapter interfaces** for sessions, server-to-client requests, and persistence when you outgrow stateless mode
+- **Middleware hooks** and server composition via `.group()` for modular setups and namespacing
+
+## Next Steps
+
+<div class="card-grid">
+
+- [**Getting Started**](/mcp-lite/getting-started)
+  Installation and first steps
+
+- [**Core Concepts**](/mcp-lite/core-concepts/tools)
+  Learn about tools, resources, and prompts
+
+- [**Features**](/mcp-lite/features/middleware)
+  Explore middleware, sessions, and adapters
+
+- [**Deployment**](/mcp-lite/deployment/environments)
+  Deploy to various platforms
+
+</div>
