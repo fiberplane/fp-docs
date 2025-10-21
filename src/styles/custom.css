@@ -543,3 +543,22 @@ main {
 :root[data-theme='dark'] .sidebar summary:hover {
   background-color: transparent !important;
 }
+
+/* Social icons - blue/grey for not-selected state */
+.social-icons a {
+  color: var(--sl-color-gray-4) !important;
+  transition: color 0.2s ease !important;
+}
+
+.social-icons a:hover {
+  color: var(--sl-color-text-accent) !important;
+}
+
+/* Dark mode social icons */
+:root[data-theme='dark'] .social-icons a {
+  color: var(--sl-color-gray-4) !important;
+}
+
+:root[data-theme='dark'] .social-icons a:hover {
+  color: var(--sl-color-accent-high) !important;
+}
