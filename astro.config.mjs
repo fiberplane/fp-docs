@@ -7,103 +7,165 @@ export default defineConfig({
     starlight({
       title: "Fiberplane",
       logo: {
-        src: './public/logo.svg',
+        src: "./public/logo.svg",
       },
-      customCss: ['./src/styles/custom.css'],
-      favicon: '/favicon.svg',
+      components: {
+        ThemeSelect: './src/components/ThemeSelect.astro',
+      },
+      social: [
+        {
+          icon: "github",
+          label: "GitHub",
+          href: "https://github.com/fiberplane",
+        },
+        {
+          icon: "discord",
+          label: "Discord",
+          href: "https://discord.com/invite/cqdY6SpfVR",
+        },
+        {
+          icon: "x.com",
+          label: "X",
+          href: "https://x.com/fiberplane",
+        },
+      ],
+      customCss: ["./src/styles/custom.css"],
+      favicon: "/favicon.svg",
       head: [
         {
-          tag: 'link',
+          tag: "link",
           attrs: {
-            rel: 'icon',
-            href: '/favicon-light.svg',
-            media: '(prefers-color-scheme: light)',
+            rel: "icon",
+            href: "/favicon-light.svg",
+            media: "(prefers-color-scheme: light)",
           },
         },
         {
-          tag: 'link',
+          tag: "link",
           attrs: {
-            rel: 'icon',
-            href: '/favicon-dark.svg',
-            media: '(prefers-color-scheme: dark)',
+            rel: "icon",
+            href: "/favicon-dark.svg",
+            media: "(prefers-color-scheme: dark)",
           },
         },
       ],
       sidebar: [
         {
-          label: 'MCP Lite',
+          label: "MCP Lite",
           collapsed: false,
           items: [
-            { label: 'Overview', link: '/mcp-lite/' },
-            { label: 'Getting Started', link: '/mcp-lite/getting-started' },
+            { label: "Overview", link: "/mcp-lite/" },
+            { label: "Getting Started", link: "/mcp-lite/getting-started" },
             {
-              label: 'Core Concepts',
+              label: "Core Concepts",
               collapsed: false,
               items: [
-                { label: 'Tools', link: '/mcp-lite/core-concepts/tools' },
-                { label: 'Resources', link: '/mcp-lite/core-concepts/resources' },
-                { label: 'Prompts', link: '/mcp-lite/core-concepts/prompts' },
-                { label: 'Type Safety', link: '/mcp-lite/core-concepts/type-safety' },
-              ]
+                { label: "Tools", link: "/mcp-lite/core-concepts/tools" },
+                {
+                  label: "Resources",
+                  link: "/mcp-lite/core-concepts/resources",
+                },
+                { label: "Prompts", link: "/mcp-lite/core-concepts/prompts" },
+                {
+                  label: "Type Safety",
+                  link: "/mcp-lite/core-concepts/type-safety",
+                },
+              ],
             },
             {
-              label: 'Features',
+              label: "Features",
               collapsed: false,
               items: [
-                { label: 'Middleware', link: '/mcp-lite/features/middleware' },
-                { label: 'Sessions', link: '/mcp-lite/features/sessions' },
-                { label: 'Adapters', link: '/mcp-lite/features/adapters' },
-                { label: 'Error Handling', link: '/mcp-lite/features/error-handling' },
-              ]
+                { label: "Middleware", link: "/mcp-lite/features/middleware" },
+                { label: "Sessions", link: "/mcp-lite/features/sessions" },
+                { label: "Adapters", link: "/mcp-lite/features/adapters" },
+                {
+                  label: "Error Handling",
+                  link: "/mcp-lite/features/error-handling",
+                },
+              ],
             },
             {
-              label: 'Advanced',
+              label: "Advanced",
               collapsed: true,
               items: [
-                { label: 'Elicitation', link: '/mcp-lite/advanced/elicitation' },
-                { label: 'Sampling', link: '/mcp-lite/advanced/sampling' },
-                { label: 'Protocol Versions', link: '/mcp-lite/advanced/protocol-versions' },
-              ]
+                {
+                  label: "Elicitation",
+                  link: "/mcp-lite/advanced/elicitation",
+                },
+                { label: "Sampling", link: "/mcp-lite/advanced/sampling" },
+                {
+                  label: "Protocol Versions",
+                  link: "/mcp-lite/advanced/protocol-versions",
+                },
+              ],
             },
             {
-              label: 'Deployment',
+              label: "Deployment",
               collapsed: true,
               items: [
-                { label: 'Runtime Environments', link: '/mcp-lite/deployment/environments' },
-                { label: 'Deployment Patterns', link: '/mcp-lite/deployment/patterns' },
-              ]
+                {
+                  label: "Runtime Environments",
+                  link: "/mcp-lite/deployment/environments",
+                },
+                {
+                  label: "Deployment Patterns",
+                  link: "/mcp-lite/deployment/patterns",
+                },
+              ],
             },
-            { label: 'Examples', link: '/mcp-lite/examples' }
-          ]
+            { label: "Examples", link: "/mcp-lite/examples" },
+          ],
         },
         {
-          label: 'MCP Gateway',
+          label: "MCP Gateway",
           collapsed: true,
           items: [
-            { label: 'Overview', link: '/mcp-gateway/' },
-            { label: 'Getting Started', link: '/mcp-gateway/getting-started' },
+            { label: "Overview", link: "/mcp-gateway/" },
+            { label: "Getting Started", link: "/mcp-gateway/getting-started" },
             {
-              label: 'Core Concepts',
+              label: "Core Concepts",
               collapsed: false,
               items: [
-                { label: 'Server Management', link: '/mcp-gateway/core-concepts/server-management' },
-                { label: 'Activity Logging', link: '/mcp-gateway/core-concepts/activity-logging' },
-                { label: 'Interfaces', link: '/mcp-gateway/core-concepts/interfaces' },
-              ]
+                {
+                  label: "Server Management",
+                  link: "/mcp-gateway/core-concepts/server-management",
+                },
+                {
+                  label: "Activity Logging",
+                  link: "/mcp-gateway/core-concepts/activity-logging",
+                },
+                {
+                  label: "Interfaces",
+                  link: "/mcp-gateway/core-concepts/interfaces",
+                },
+              ],
             },
             {
-              label: 'Features',
+              label: "Features",
               collapsed: false,
               items: [
-                { label: 'CLI Options', link: '/mcp-gateway/features/cli-options' },
-                { label: 'Terminal UI', link: '/mcp-gateway/features/terminal-ui' },
-                { label: 'Web Interface', link: '/mcp-gateway/features/web-interface' },
-                { label: 'Storage & Registry', link: '/mcp-gateway/features/storage' },
-              ]
+                {
+                  label: "CLI Options",
+                  link: "/mcp-gateway/features/cli-options",
+                },
+                {
+                  label: "Terminal UI",
+                  link: "/mcp-gateway/features/terminal-ui",
+                },
+                {
+                  label: "Web Interface",
+                  link: "/mcp-gateway/features/web-interface",
+                },
+                {
+                  label: "Storage & Registry",
+                  link: "/mcp-gateway/features/storage",
+                },
+              ],
             },
-            { label: 'Troubleshooting', link: '/mcp-gateway/troubleshooting' }
-          ]
-        }
+            { label: "Troubleshooting", link: "/mcp-gateway/troubleshooting" },
+          ],
+        },
       ],
     }),
   ],
