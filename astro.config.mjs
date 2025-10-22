@@ -9,6 +9,9 @@ export default defineConfig({
       logo: {
         src: "./public/logo.svg",
       },
+      components: {
+        ThemeSelect: './src/components/ThemeSelect.astro',
+      },
       social: [
         {
           icon: "github",
