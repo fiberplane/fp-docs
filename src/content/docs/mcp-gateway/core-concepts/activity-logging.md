@@ -234,6 +234,6 @@ cat ~/.mcp-gateway/captures/my-server/*.jsonl | \
 
 ## Next Steps
 
-- [**Interfaces**](/mcp-gateway/core-concepts/interfaces) - Learn about TUI and Web UI
-- [**Storage & Registry**](/mcp-gateway/features/storage) - Understand data persistence
-- [**Debugging**](/mcp-gateway/development/debugging) - Advanced debugging techniques
+- [**Interfaces**](/mcp-gateway/core-concepts/interfaces/) - Learn about TUI and Web UI
+- [**Storage & Registry**](/mcp-gateway/features/storage/) - Understand data persistence
+- [**Debugging**](/mcp-gateway/development/debugging/) - Advanced debugging techniques

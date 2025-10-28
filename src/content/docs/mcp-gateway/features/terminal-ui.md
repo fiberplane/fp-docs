@@ -304,6 +304,6 @@ cd my-project && npm run dev
 
 ## Next Steps
 
-- [**Web Interface**](/mcp-gateway/features/web-interface) - Explore the Web UI
-- [**CLI Options**](/mcp-gateway/features/cli-options) - Configure the gateway
-- [**Activity Logging**](/mcp-gateway/core-concepts/activity-logging) - Understand logging
+- [**Web Interface**](/mcp-gateway/features/web-interface/) - Explore the Web UI
+- [**CLI Options**](/mcp-gateway/features/cli-options/) - Configure the gateway
+- [**Activity Logging**](/mcp-gateway/core-concepts/activity-logging/) - Understand logging

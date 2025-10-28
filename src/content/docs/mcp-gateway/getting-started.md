@@ -115,6 +115,6 @@ open http://localhost:3333/ui
 
 ## Next Steps
 
-- [**Server Management**](/mcp-gateway/core-concepts/server-management) - Add and configure MCP servers
-- [**Terminal UI**](/mcp-gateway/features/terminal-ui) - Learn keyboard shortcuts
-- [**CLI Options**](/mcp-gateway/features/cli-options) - Explore all command-line options
+- [**Server Management**](/mcp-gateway/core-concepts/server-management/) - Add and configure MCP servers
+- [**Terminal UI**](/mcp-gateway/features/terminal-ui/) - Learn keyboard shortcuts
+- [**CLI Options**](/mcp-gateway/features/cli-options/) - Explore all command-line options

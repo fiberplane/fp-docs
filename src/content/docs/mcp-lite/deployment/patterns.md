@@ -118,6 +118,6 @@ Only implement custom adapters when:
 
 ## Next Steps
 
-- [**Adapters**](/mcp-lite/features/adapters) - Implement custom adapters
-- [**Runtime Environments**](/mcp-lite/deployment/environments) - Deploy to specific platforms
-- [**Examples**](/mcp-lite/examples) - See complete implementations
+- [**Adapters**](/mcp-lite/features/adapters/) - Implement custom adapters
+- [**Runtime Environments**](/mcp-lite/deployment/environments/) - Deploy to specific platforms
+- [**Examples**](/mcp-lite/examples/) - See complete implementations

@@ -130,5 +130,5 @@ Have a useful pattern or integration? Consider contributing an example to help o
 
 ## Next Steps
 
-- [**Getting Started**](/mcp-lite/getting-started) - Build your first server
-- [**Deployment**](/mcp-lite/deployment/environments) - Deploy to production
+- [**Getting Started**](/mcp-lite/getting-started/) - Build your first server
+- [**Deployment**](/mcp-lite/deployment/environments/) - Deploy to production

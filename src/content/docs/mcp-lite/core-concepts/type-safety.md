@@ -132,5 +132,5 @@ Check out the examples directory for complete implementations:
 
 ## Next Steps
 
-- [**Tools**](/mcp-lite/core-concepts/tools) - Learn about tool patterns
-- [**Error Handling**](/mcp-lite/features/error-handling) - Handle validation errors
+- [**Tools**](/mcp-lite/core-concepts/tools/) - Learn about tool patterns
+- [**Error Handling**](/mcp-lite/features/error-handling/) - Handle validation errors

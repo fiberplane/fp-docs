@@ -165,6 +165,6 @@ handler: (args, ctx) => {
 
 ## Next Steps
 
-- [**Type Safety**](/mcp-lite/core-concepts/type-safety) - Learn about automatic type inference
-- [**Resources**](/mcp-lite/core-concepts/resources) - Expose data through resources
-- [**Error Handling**](/mcp-lite/features/error-handling) - Handle errors gracefully
+- [**Type Safety**](/mcp-lite/core-concepts/type-safety/) - Learn about automatic type inference
+- [**Resources**](/mcp-lite/core-concepts/resources/) - Expose data through resources
+- [**Error Handling**](/mcp-lite/features/error-handling/) - Handle errors gracefully
