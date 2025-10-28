@@ -87,5 +87,5 @@ mcp.tool("frenchness_evaluation", {
 
 ## Next Steps
 
-- [**Elicitation**](/mcp-lite/advanced/elicitation) - Request user input
-- [**Adapters**](/mcp-lite/features/adapters) - Configure adapters
+- [**Elicitation**](/mcp-lite/advanced/elicitation/) - Request user input
+- [**Adapters**](/mcp-lite/features/adapters/) - Configure adapters

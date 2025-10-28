@@ -3,6 +3,7 @@ import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 
 export default defineConfig({
+  trailingSlash: "always",
   integrations: [
     starlight({
       title: "Fiberplane",
@@ -55,20 +56,20 @@ export default defineConfig({
           collapsed: false,
           items: [
             { label: "Overview", link: "/mcp-lite/" },
-            { label: "Getting Started", link: "/mcp-lite/getting-started" },
+            { label: "Getting Started", link: "/mcp-lite/getting-started/" },
             {
               label: "Core Concepts",
               collapsed: false,
               items: [
-                { label: "Tools", link: "/mcp-lite/core-concepts/tools" },
+                { label: "Tools", link: "/mcp-lite/core-concepts/tools/" },
                 {
                   label: "Resources",
-                  link: "/mcp-lite/core-concepts/resources",
+                  link: "/mcp-lite/core-concepts/resources/",
                 },
-                { label: "Prompts", link: "/mcp-lite/core-concepts/prompts" },
+                { label: "Prompts", link: "/mcp-lite/core-concepts/prompts/" },
                 {
                   label: "Type Safety",
-                  link: "/mcp-lite/core-concepts/type-safety",
+                  link: "/mcp-lite/core-concepts/type-safety/",
                 },
               ],
             },
@@ -76,12 +77,12 @@ export default defineConfig({
               label: "Features",
               collapsed: false,
               items: [
-                { label: "Middleware", link: "/mcp-lite/features/middleware" },
-                { label: "Sessions", link: "/mcp-lite/features/sessions" },
-                { label: "Adapters", link: "/mcp-lite/features/adapters" },
+                { label: "Middleware", link: "/mcp-lite/features/middleware/" },
+                { label: "Sessions", link: "/mcp-lite/features/sessions/" },
+                { label: "Adapters", link: "/mcp-lite/features/adapters/" },
                 {
                   label: "Error Handling",
-                  link: "/mcp-lite/features/error-handling",
+                  link: "/mcp-lite/features/error-handling/",
                 },
               ],
             },
@@ -91,12 +92,12 @@ export default defineConfig({
               items: [
                 {
                   label: "Elicitation",
-                  link: "/mcp-lite/advanced/elicitation",
+                  link: "/mcp-lite/advanced/elicitation/",
                 },
-                { label: "Sampling", link: "/mcp-lite/advanced/sampling" },
+                { label: "Sampling", link: "/mcp-lite/advanced/sampling/" },
                 {
                   label: "Protocol Versions",
-                  link: "/mcp-lite/advanced/protocol-versions",
+                  link: "/mcp-lite/advanced/protocol-versions/",
                 },
               ],
             },
@@ -106,15 +107,15 @@ export default defineConfig({
               items: [
                 {
                   label: "Runtime Environments",
-                  link: "/mcp-lite/deployment/environments",
+                  link: "/mcp-lite/deployment/environments/",
                 },
                 {
                   label: "Deployment Patterns",
-                  link: "/mcp-lite/deployment/patterns",
+                  link: "/mcp-lite/deployment/patterns/",
                 },
               ],
             },
-            { label: "Examples", link: "/mcp-lite/examples" },
+            { label: "Examples", link: "/mcp-lite/examples/" },
           ],
         },
         {
@@ -122,22 +123,22 @@ export default defineConfig({
           collapsed: true,
           items: [
             { label: "Overview", link: "/mcp-gateway/" },
-            { label: "Getting Started", link: "/mcp-gateway/getting-started" },
+            { label: "Getting Started", link: "/mcp-gateway/getting-started/" },
             {
               label: "Core Concepts",
               collapsed: false,
               items: [
                 {
                   label: "Server Management",
-                  link: "/mcp-gateway/core-concepts/server-management",
+                  link: "/mcp-gateway/core-concepts/server-management/",
                 },
                 {
                   label: "Activity Logging",
-                  link: "/mcp-gateway/core-concepts/activity-logging",
+                  link: "/mcp-gateway/core-concepts/activity-logging/",
                 },
                 {
                   label: "Interfaces",
-                  link: "/mcp-gateway/core-concepts/interfaces",
+                  link: "/mcp-gateway/core-concepts/interfaces/",
                 },
               ],
             },
@@ -147,23 +148,23 @@ export default defineConfig({
               items: [
                 {
                   label: "CLI Options",
-                  link: "/mcp-gateway/features/cli-options",
+                  link: "/mcp-gateway/features/cli-options/",
                 },
                 {
                   label: "Terminal UI",
-                  link: "/mcp-gateway/features/terminal-ui",
+                  link: "/mcp-gateway/features/terminal-ui/",
                 },
                 {
                   label: "Web Interface",
-                  link: "/mcp-gateway/features/web-interface",
+                  link: "/mcp-gateway/features/web-interface/",
                 },
                 {
                   label: "Storage & Registry",
-                  link: "/mcp-gateway/features/storage",
+                  link: "/mcp-gateway/features/storage/",
                 },
               ],
             },
-            { label: "Troubleshooting", link: "/mcp-gateway/troubleshooting" },
+            { label: "Troubleshooting", link: "/mcp-gateway/troubleshooting/" },
           ],
         },
       ],

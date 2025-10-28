@@ -102,5 +102,5 @@ server.use(async (ctx, next) => {
 
 ## Next Steps
 
-- [**Middleware**](/mcp-lite/features/middleware) - Add request processing
-- [**Type Safety**](/mcp-lite/core-concepts/type-safety) - Prevent errors with validation
+- [**Middleware**](/mcp-lite/features/middleware/) - Add request processing
+- [**Type Safety**](/mcp-lite/core-concepts/type-safety/) - Prevent errors with validation

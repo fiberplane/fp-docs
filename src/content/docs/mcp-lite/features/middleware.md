@@ -92,5 +92,5 @@ See `examples/auth-clerk` for the full implementation.
 
 ## Next Steps
 
-- [**Sessions**](/mcp-lite/features/sessions) - Enable session management
-- [**Error Handling**](/mcp-lite/features/error-handling) - Handle errors in middleware
+- [**Sessions**](/mcp-lite/features/sessions/) - Enable session management
+- [**Error Handling**](/mcp-lite/features/error-handling/) - Handle errors in middleware

@@ -249,6 +249,6 @@ Access via Web UI only: `http://localhost:3333/ui`
 
 ## Next Steps
 
-- [**Terminal UI Features**](/mcp-gateway/features/terminal-ui) - Master keyboard shortcuts
-- [**Web Interface**](/mcp-gateway/features/web-interface) - Explore Web UI features
-- [**CLI Options**](/mcp-gateway/features/cli-options) - Configure the gateway
+- [**Terminal UI Features**](/mcp-gateway/features/terminal-ui/) - Master keyboard shortcuts
+- [**Web Interface**](/mcp-gateway/features/web-interface/) - Explore Web UI features
+- [**CLI Options**](/mcp-gateway/features/cli-options/) - Configure the gateway
