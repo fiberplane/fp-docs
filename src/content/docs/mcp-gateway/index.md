@@ -91,6 +91,6 @@ open http://localhost:3333/ui
 
 ## Next Steps
 
-- [**Getting Started**](/mcp-gateway/getting-started/) - Install and configure MCP Gateway
-- [**Server Management**](/mcp-gateway/core-concepts/server-management/) - Learn to manage MCP servers
-- [**Terminal UI**](/mcp-gateway/features/terminal-ui/) - Master keyboard shortcuts and TUI features
+- [**Getting Started**](/mcp-gateway/getting-started) - Install and configure MCP Gateway
+- [**Server Management**](/mcp-gateway/core-concepts/server-management) - Learn to manage MCP servers
+- [**Terminal UI**](/mcp-gateway/features/terminal-ui) - Master keyboard shortcuts and TUI features

@@ -98,7 +98,7 @@ Let's break down what's happening:
 
 Now that you have a basic server running, explore:
 
-- [**Tools**](/mcp-lite/core-concepts/tools/) - Learn about different tool patterns
-- [**Type Safety**](/mcp-lite/core-concepts/type-safety/) - Understand automatic type inference
-- [**Resources**](/mcp-lite/core-concepts/resources/) - Expose data through resources
-- [**Middleware**](/mcp-lite/features/middleware/) - Add authentication and logging
+- [**Tools**](/mcp-lite/core-concepts/tools) - Learn about different tool patterns
+- [**Type Safety**](/mcp-lite/core-concepts/type-safety) - Understand automatic type inference
+- [**Resources**](/mcp-lite/core-concepts/resources) - Expose data through resources
+- [**Middleware**](/mcp-lite/features/middleware) - Add authentication and logging

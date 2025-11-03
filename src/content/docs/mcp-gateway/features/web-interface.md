@@ -355,6 +355,6 @@ If the UI is slow:
 
 ## Next Steps
 
-- [**Terminal UI**](/mcp-gateway/features/terminal-ui/) - Learn keyboard shortcuts
-- [**CLI Options**](/mcp-gateway/features/cli-options/) - Configure the gateway
-- [**Activity Logging**](/mcp-gateway/core-concepts/activity-logging/) - Understand logging
+- [**Terminal UI**](/mcp-gateway/features/terminal-ui) - Learn keyboard shortcuts
+- [**CLI Options**](/mcp-gateway/features/cli-options) - Configure the gateway
+- [**Activity Logging**](/mcp-gateway/core-concepts/activity-logging) - Understand logging

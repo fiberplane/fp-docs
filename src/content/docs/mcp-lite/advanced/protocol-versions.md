@@ -103,5 +103,5 @@ For more details on protocol changes, see the [MCP Specification Changelog](http
 
 ## Next Steps
 
-- [**Sessions**](/mcp-lite/features/sessions/) - Understand session management
-- [**Elicitation**](/mcp-lite/advanced/elicitation/) - Use version-specific features
+- [**Sessions**](/mcp-lite/features/sessions) - Understand session management
+- [**Elicitation**](/mcp-lite/advanced/elicitation) - Use version-specific features

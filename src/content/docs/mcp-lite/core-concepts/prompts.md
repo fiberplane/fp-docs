@@ -86,5 +86,5 @@ The `_meta` and `title` from the definition appear in `prompts/list` responses. 
 
 ## Next Steps
 
-- [**Type Safety**](/mcp-lite/core-concepts/type-safety/) - Understand schema validation
-- [**Tools**](/mcp-lite/core-concepts/tools/) - Define callable functions
+- [**Type Safety**](/mcp-lite/core-concepts/type-safety) - Understand schema validation
+- [**Tools**](/mcp-lite/core-concepts/tools) - Define callable functions

@@ -236,6 +236,6 @@ mcp-gateway --port 3333
 
 ## Next Steps
 
-- [**Terminal UI**](/mcp-gateway/features/terminal-ui/) - Master keyboard shortcuts
-- [**Storage & Registry**](/mcp-gateway/features/storage/) - Understand data storage
-- [**Production Deployment**](/mcp-gateway/deployment/production/) - Deploy to production
+- [**Terminal UI**](/mcp-gateway/features/terminal-ui) - Master keyboard shortcuts
+- [**Storage & Registry**](/mcp-gateway/features/storage) - Understand data storage
+- [**Production Deployment**](/mcp-gateway/deployment/production) - Deploy to production

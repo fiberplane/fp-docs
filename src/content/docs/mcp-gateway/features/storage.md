@@ -365,6 +365,6 @@ mcp-gateway --storage-dir ~/mcp-data
 
 ## Next Steps
 
-- [**Activity Logging**](/mcp-gateway/core-concepts/activity-logging/) - Understanding captured logs
-- [**CLI Options**](/mcp-gateway/features/cli-options/) - Configure storage location
-- [**Debugging**](/mcp-gateway/development/debugging/) - Inspect storage
+- [**Activity Logging**](/mcp-gateway/core-concepts/activity-logging) - Understanding captured logs
+- [**CLI Options**](/mcp-gateway/features/cli-options) - Configure storage location
+- [**Debugging**](/mcp-gateway/development/debugging) - Inspect storage
