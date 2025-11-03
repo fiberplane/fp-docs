@@ -1,6 +1,5 @@
-// @ts-check
-import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
+import { defineConfig } from "astro/config";
 
 export default defineConfig({
   trailingSlash: "always",
@@ -11,7 +10,7 @@ export default defineConfig({
         src: "./public/logo.svg",
       },
       components: {
-        ThemeSelect: './src/components/ThemeSelect.astro',
+        ThemeSelect: "./src/components/ThemeSelect.astro",
       },
       social: [
         {
