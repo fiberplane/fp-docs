@@ -1,7 +1,9 @@
+import cloudflare from "@astrojs/cloudflare";
 import starlight from "@astrojs/starlight";
 import { defineConfig } from "astro/config";
 
 export default defineConfig({
+  adapter: cloudflare(),
   integrations: [
     starlight({
       title: "Fiberplane",

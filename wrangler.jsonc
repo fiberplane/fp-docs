@@ -1,7 +1,13 @@
 {
-	"name": "fiberplane-docs",
-	"compatibility_date": "2025-11-03",
-	"assets": {
-		"directory": "./dist"
-	}
+  "name": "fiberplane-docs",
+  "main": "./dist/_worker.js/index.js",
+  "compatibility_date": "2025-11-03",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "assets": {
+    "binding": "ASSETS",
+    "directory": "./dist"
+  },
+  "observability": {
+    "enabled": true
+  }
 }
