@@ -464,6 +464,6 @@ If you've tried the above and still have issues:
 
 ## Next Steps
 
-- [**Development Debugging**](/mcp-gateway/development/debugging/) - Advanced debugging
-- [**CLI Options**](/mcp-gateway/features/cli-options/) - Configuration options
-- [**Storage & Registry**](/mcp-gateway/features/storage/) - Understanding data storage
+- [**Development Debugging**](/mcp-gateway/development/debugging) - Advanced debugging
+- [**CLI Options**](/mcp-gateway/features/cli-options) - Configuration options
+- [**Storage & Registry**](/mcp-gateway/features/storage) - Understanding data storage

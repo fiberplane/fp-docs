@@ -72,5 +72,5 @@ See `examples/cloudflare-worker-kv/src/mcp/client-request-adapter.ts` for the fu
 
 ## Next Steps
 
-- [**Adapters**](/mcp-lite/features/adapters/) - Understand adapter interfaces
-- [**Sampling**](/mcp-lite/advanced/sampling/) - Request LLM completions
+- [**Adapters**](/mcp-lite/features/adapters) - Understand adapter interfaces
+- [**Sampling**](/mcp-lite/advanced/sampling) - Request LLM completions

@@ -156,5 +156,5 @@ deno run --allow-net server.ts
 
 ## Next Steps
 
-- [**Deployment Patterns**](/mcp-lite/deployment/patterns/) - Learn scaling strategies
-- [**Adapters**](/mcp-lite/features/adapters/) - Add persistence
+- [**Deployment Patterns**](/mcp-lite/deployment/patterns) - Learn scaling strategies
+- [**Adapters**](/mcp-lite/features/adapters) - Add persistence

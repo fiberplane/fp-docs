@@ -175,6 +175,6 @@ Group related servers logically:
 
 ## Next Steps
 
-- [**Activity Logging**](/mcp-gateway/core-concepts/activity-logging/) - Track requests and responses
-- [**Terminal UI**](/mcp-gateway/features/terminal-ui/) - Master keyboard shortcuts
-- [**Storage & Registry**](/mcp-gateway/features/storage/) - Understand data persistence
+- [**Activity Logging**](/mcp-gateway/core-concepts/activity-logging) - Track requests and responses
+- [**Terminal UI**](/mcp-gateway/features/terminal-ui) - Master keyboard shortcuts
+- [**Storage & Registry**](/mcp-gateway/features/storage) - Understand data persistence

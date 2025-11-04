@@ -85,5 +85,5 @@ The `_meta` from the resource definition appears in list responses. Handlers can
 
 ## Next Steps
 
-- [**Prompts**](/mcp-lite/core-concepts/prompts/) - Generate LLM conversation prompts
-- [**Tools**](/mcp-lite/core-concepts/tools/) - Define callable functions
+- [**Prompts**](/mcp-lite/core-concepts/prompts) - Generate LLM conversation prompts
+- [**Tools**](/mcp-lite/core-concepts/tools) - Define callable functions

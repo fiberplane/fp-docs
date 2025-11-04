@@ -69,5 +69,5 @@ server.tool("myTool", {
 
 ## Next Steps
 
-- [**Adapters**](/mcp-lite/features/adapters/) - Scale beyond in-memory sessions
-- [**Elicitation**](/mcp-lite/advanced/elicitation/) - Request input mid-execution
+- [**Adapters**](/mcp-lite/features/adapters) - Scale beyond in-memory sessions
+- [**Elicitation**](/mcp-lite/advanced/elicitation) - Request input mid-execution

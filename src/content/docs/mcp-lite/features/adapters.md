@@ -113,5 +113,5 @@ See `examples/cloudflare-worker-kv` for a production implementation using Cloudf
 
 ## Next Steps
 
-- [**Deployment Patterns**](/mcp-lite/deployment/patterns/) - Learn deployment strategies
-- [**Elicitation**](/mcp-lite/advanced/elicitation/) - Implement client requests
+- [**Deployment Patterns**](/mcp-lite/deployment/patterns) - Learn deployment strategies
+- [**Elicitation**](/mcp-lite/advanced/elicitation) - Implement client requests
