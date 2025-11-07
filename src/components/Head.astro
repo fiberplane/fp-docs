@@ -1,17 +1,23 @@
 ---
 import Default from "@astrojs/starlight/components/Head.astro";
 import type { Props } from "@astrojs/starlight/props";
+import { getCollection } from "astro:content";
 
-// Get the Starlight route from locals
-const route = Astro.locals.starlightRoute;
-const entryId = route.entry.id;
+const entry = Astro.locals.starlightRoute.entry;
 
-// Construct the OG image path based on the entry id
-let ogRoute = entryId ? entryId.replace(/\.(md|mdx)$/, "") : "index";
-const ogImagePath = `/og/${ogRoute}.png`;
+// Get all docs entries to check if OG image exists for this route
+const docsEntries = await getCollection("docs");
+const ogRoutes = new Set(
+  docsEntries.map(({ id }) => id.replace(/\/index$/, "") || "index")
+);
 
-// Construct full URL for OG image
-const ogImageUrl = new URL(ogImagePath, Astro.site);
+// Convert entry ID to route format
+const route = entry.id;
+const routeId = route.replace(/\/index$/, "") || "index";
+
+// Fall back to index if we don't have an OG image for this route
+const ogRoute = ogRoutes.has(routeId) ? routeId : "index";
+const ogImageUrl = new URL(`/og/${ogRoute}.png`, Astro.site);
 ---
 
 <Default {...Astro.props} />
