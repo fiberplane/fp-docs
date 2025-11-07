@@ -1,43 +1,23 @@
 ---
-import type { Props } from "@astrojs/starlight/props";
 import Default from "@astrojs/starlight/components/Head.astro";
+import type { Props } from "@astrojs/starlight/props";
 
-// Get the current page entry
-const { entry } = Astro.props;
+// Get the Starlight route from locals
+const route = Astro.locals.starlightRoute;
+const entryId = route.entry.id;
 
-// Only add OG tags if we have an entry (some pages like 404 don't have one)
-const hasEntry = entry !== undefined;
-
-// Construct the OG image path based on the entry slug
-// The slug is like "mcp-lite/index" or "mcp-gateway/getting-started"
-const ogImagePath = hasEntry
-  ? entry.slug === "index"
-    ? "/og/index.png"
-    : `/og/${entry.slug}.png`
-  : "/og/index.png";
+// Construct the OG image path based on the entry id
+let ogRoute = entryId ? entryId.replace(/\.(md|mdx)$/, "") : "index";
+const ogImagePath = `/og/${ogRoute}.png`;
 
 // Construct full URL for OG image
 const ogImageUrl = new URL(ogImagePath, Astro.site);
-
-// Get page title and description
-const pageTitle = hasEntry ? entry.data.title : "Fiberplane";
-const pageDescription = hasEntry
-  ? entry.data.description || "Fiberplane Documentation"
-  : "Fiberplane Documentation";
 ---
 
-<Default {...Astro.props}>
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content={Astro.url} />
-  <meta property="og:title" content={pageTitle} />
-  <meta property="og:description" content={pageDescription} />
-  <meta property="og:image" content={ogImageUrl} />
+<Default {...Astro.props} />
 
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content={Astro.url} />
-  <meta property="twitter:title" content={pageTitle} />
-  <meta property="twitter:description" content={pageDescription} />
-  <meta property="twitter:image" content={ogImageUrl} />
-</Default>
+<!-- Open Graph image -->
+<meta property="og:image" content={ogImageUrl} />
+
+<!-- Twitter image -->
+<meta property="twitter:image" content={ogImageUrl} />
