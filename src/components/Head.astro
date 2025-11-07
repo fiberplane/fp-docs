@@ -1,0 +1,29 @@
+---
+import Default from "@astrojs/starlight/components/Head.astro";
+import type { Props } from "@astrojs/starlight/props";
+import { getCollection } from "astro:content";
+
+const entry = Astro.locals.starlightRoute.entry;
+
+// Get all docs entries to check if OG image exists for this route
+const docsEntries = await getCollection("docs");
+const ogRoutes = new Set(
+  docsEntries.map(({ id }) => id.replace(/\/index$/, "") || "index")
+);
+
+// Convert entry ID to route format
+const route = entry.id;
+const routeId = route.replace(/\/index$/, "") || "index";
+
+// Fall back to index if we don't have an OG image for this route
+const ogRoute = ogRoutes.has(routeId) ? routeId : "index";
+const ogImageUrl = new URL(`/og/${ogRoute}.png`, Astro.site);
+---
+
+<Default {...Astro.props} />
+
+<!-- Open Graph image -->
+<meta property="og:image" content={ogImageUrl} />
+
+<!-- Twitter image -->
+<meta property="twitter:image" content={ogImageUrl} />

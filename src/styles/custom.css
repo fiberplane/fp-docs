@@ -25,7 +25,6 @@
   --sl-color-bg-nav: var(--sl-color-black); /* Nav background - white */
   --sl-color-bg-sidebar: hsl(0, 0%, 99%); /* Sidebar - almost pure white like Vercel */
   --sl-color-hairline-light: var(--sl-color-gray-6); /* Light borders */
-  --sl-color-hairline: var(--sl-color-gray-5); /* Borders */
 }
 
 :root[data-theme='dark'] {

@@ -3,6 +3,7 @@ import starlight from "@astrojs/starlight";
 import { defineConfig } from "astro/config";
 
 export default defineConfig({
+  site: "https://docs.fiberplane.com",
   adapter: cloudflare(),
   integrations: [
     starlight({
@@ -12,6 +13,7 @@ export default defineConfig({
       },
       components: {
         ThemeSelect: "./src/components/ThemeSelect.astro",
+        Head: "./src/components/Head.astro",
       },
       social: [
         {
@@ -170,4 +172,9 @@ export default defineConfig({
       ],
     }),
   ],
+  vite: {
+    ssr: {
+      external: ["canvaskit-wasm"],
+    },
+  },
 });
