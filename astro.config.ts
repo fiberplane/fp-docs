@@ -51,6 +51,23 @@ export default defineConfig({
             media: "(prefers-color-scheme: dark)",
           },
         },
+        // Google Analytics
+        {
+          tag: "script",
+          attrs: {
+            src: "https://www.googletagmanager.com/gtag/js?id=G-GEKL1TDFL6",
+            async: true,
+          },
+        },
+        {
+          tag: "script",
+          content: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-GEKL1TDFL6');
+          `,
+        },
       ],
       sidebar: [
         {
