@@ -44,7 +44,7 @@ http://localhost:3333/ui?token=YOUR_TOKEN
 
 Route MCP clients through the gateway to capture traffic:
 
-```
+```text
 Direct:  MCP Client → http://localhost:3001/mcp → MCP Server
 Proxied: MCP Client → http://localhost:3333/s/my-server/mcp → Gateway → MCP Server
                                                                   ↓
@@ -66,7 +66,7 @@ Proxy endpoints do **not** require authentication—upstream servers handle thei
 
 Files stored under `~/.mcp-gateway/`:
 
-```
+```text
 ~/.mcp-gateway/
 ├── mcp.json     # Server registry
 ├── logs.db      # SQLite traffic logs

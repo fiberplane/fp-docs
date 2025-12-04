@@ -18,7 +18,7 @@ MCP Gateway is a local development tool that proxies communication between AI ap
 
 The gateway operates in dual mode: it's both a proxy for MCP servers AND an MCP server itself.
 
-```
+```text
 ┌───────────────────────────────────────────────────────────────┐
 │                       MCP Gateway                             │
 │                                                               │
@@ -71,4 +71,4 @@ The gateway operates in dual mode: it's both a proxy for MCP servers AND an MCP 
 ## Next Steps
 
 - [**Getting Started**](/mcp-gateway/getting-started) - Install and configure MCP Gateway
-- [**Reference**](/mcp-gateway/reference/cli) - CLI, storage, and API reference
+- [**Reference**](/mcp-gateway/reference#cli) - CLI, storage, and API reference

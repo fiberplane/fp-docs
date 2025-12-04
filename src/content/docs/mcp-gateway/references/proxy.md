@@ -5,7 +5,7 @@ description: Routing MCP traffic through the gateway
 
 Route MCP clients through the gateway to capture traffic:
 
-```
+```text
 Direct:  MCP Client → http://localhost:3001/mcp → MCP Server
 Proxied: MCP Client → http://localhost:3333/s/my-server/mcp → Gateway → MCP Server
                                                                   ↓
