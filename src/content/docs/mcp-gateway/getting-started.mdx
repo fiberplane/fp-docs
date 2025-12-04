@@ -69,47 +69,6 @@ More details [here](https://github.com/fiberplane/mcp-gateway?tab=readme-ov-file
 
 </Steps>
 
-## Basic Configuration
-
-### Custom Port
-
-```bash
-mcp-gateway --port 8080
-```
-
-### Custom Storage Directory
-
-```bash
-mcp-gateway --storage-dir /custom/path
-```
-
-## Common Commands
-
-```bash
-# Show help
-mcp-gateway --help
-
-# Show version
-mcp-gateway --version
-
-# Start with custom settings
-mcp-gateway --port 8080 --storage-dir ~/.my-gateway
-```
-
-## Verifying Installation
-
-The gateway runs locally and exposes a Web UI and API endpoints that require bearer token authentication.
-
-Web UI: Access the interface at http://localhost:3333/ui using the authentication token displayed in the terminal output.
-
-API endpoints: Requests to the gateway API require a bearer token for authentication. Example usage:
-
-```
-curl -H "Authorization: Bearer xxxxxxxxxxxxxxxxxxxxxx" http://localhost:3333/api/logs
-```
-
 ## Next Steps
 
-- [**Web UI**](/mcp-gateway/interfaces/web-ui) - Learn more about the Web UI features
-- [**CLI**](/mcp-gateway/configuration/cli) - Explore all command-line options
-- [**Proxy**](/mcp-gateway/concepts/proxy) - Learn how the proxy works
+- [**Reference**](/mcp-gateway/reference/cli) - CLI, storage, API, and all technical details

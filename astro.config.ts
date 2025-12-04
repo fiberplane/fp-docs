@@ -143,29 +143,25 @@ export default defineConfig({
           items: [
             { label: "Overview", link: "/mcp-gateway" },
             { label: "Getting Started", link: "/mcp-gateway/getting-started" },
-            { label: "Authentication", link: "/mcp-gateway/authentication" },
             {
-              label: "Interfaces",
+              label: "Reference",
               collapsed: false,
               items: [
+                { label: "CLI", link: "/mcp-gateway/reference/cli" },
+                { label: "Storage", link: "/mcp-gateway/reference/storage" },
                 {
-                  label: "Web UI",
-                  link: "/mcp-gateway/interfaces/web-ui",
+                  label: "Authentication",
+                  link: "/mcp-gateway/reference/authentication",
                 },
+                { label: "Proxy", link: "/mcp-gateway/reference/proxy" },
+                { label: "REST API", link: "/mcp-gateway/reference/rest-api" },
                 {
                   label: "Gateway MCP Server",
-                  link: "/mcp-gateway/interfaces/gateway-mcp-server",
+                  link: "/mcp-gateway/reference/gateway-mcp-server",
                 },
-                {
-                  label: "REST API",
-                  link: "/mcp-gateway/interfaces/rest-api",
-                },
+                { label: "Web UI", link: "/mcp-gateway/reference/web-ui" },
               ],
             },
-            { label: "Proxy", link: "/mcp-gateway/proxy" },
-            { label: "CLI", link: "/mcp-gateway/cli" },
-            { label: "Storage", link: "/mcp-gateway/storage" },
-            { label: "Troubleshooting", link: "/mcp-gateway/troubleshooting" },
           ],
         },
       ],
