@@ -13,4 +13,3 @@ Access: `http://localhost:3333/ui?token=YOUR_TOKEN`
 - **Export** — download logs as JSONL
 
 Updates in real-time; no manual refresh needed.
-

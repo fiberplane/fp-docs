@@ -60,4 +60,3 @@ List connected clients.
 ## GET /api/health
 
 Health check.
-

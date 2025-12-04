@@ -23,4 +23,3 @@ DEBUG=* mcp-gateway  # Enable debug logging
 ```
 
 CLI flags override environment variables.
-

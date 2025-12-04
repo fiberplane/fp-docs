@@ -48,4 +48,3 @@ Stdio server:
 
 - `sessionMode`: `"shared"` (default) or `"isolated"` (per `x-session-id`)
 - Stdio servers are long-lived; restart via UI/API
-

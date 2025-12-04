@@ -22,4 +22,3 @@ claude mcp add --transport http "my-server" \
 ```
 
 Proxy endpoints do **not** require authentication—upstream servers handle their own auth.
-
