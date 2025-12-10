@@ -144,46 +144,24 @@ export default defineConfig({
             { label: "Overview", link: "/mcp-gateway" },
             { label: "Getting Started", link: "/mcp-gateway/getting-started" },
             {
-              label: "Core Concepts",
+              label: "Reference",
               collapsed: false,
               items: [
+                { label: "CLI", link: "/mcp-gateway/reference#cli" },
+                { label: "Storage", link: "/mcp-gateway/reference#storage" },
                 {
-                  label: "Server Management",
-                  link: "/mcp-gateway/core-concepts/server-management",
+                  label: "Authentication",
+                  link: "/mcp-gateway/reference#authentication",
                 },
+                { label: "Proxy", link: "/mcp-gateway/reference#proxy" },
+                { label: "REST API", link: "/mcp-gateway/reference#rest-api" },
                 {
-                  label: "Activity Logging",
-                  link: "/mcp-gateway/core-concepts/activity-logging",
+                  label: "Gateway MCP Server",
+                  link: "/mcp-gateway/reference#gateway-mcp-server",
                 },
-                {
-                  label: "Interfaces",
-                  link: "/mcp-gateway/core-concepts/interfaces",
-                },
+                { label: "Web UI", link: "/mcp-gateway/reference#web-ui" },
               ],
             },
-            {
-              label: "Features",
-              collapsed: false,
-              items: [
-                {
-                  label: "CLI Options",
-                  link: "/mcp-gateway/features/cli-options",
-                },
-                {
-                  label: "Terminal UI",
-                  link: "/mcp-gateway/features/terminal-ui",
-                },
-                {
-                  label: "Web Interface",
-                  link: "/mcp-gateway/features/web-interface",
-                },
-                {
-                  label: "Storage & Registry",
-                  link: "/mcp-gateway/features/storage",
-                },
-              ],
-            },
-            { label: "Troubleshooting", link: "/mcp-gateway/troubleshooting" },
           ],
         },
       ],

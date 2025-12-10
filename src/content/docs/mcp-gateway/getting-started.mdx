@@ -1,0 +1,74 @@
+---
+title: Getting Started
+description: Install and set up MCP Gateway
+---
+
+import { Tabs, TabItem } from "@astrojs/starlight/components";
+import { Steps } from "@astrojs/starlight/components";
+
+## Installation
+
+MCP Gateway is available for installation through JavaScript package managers such as npm, pnpm, or bun.
+
+{/* prettier-ignore */}
+<Tabs>
+  <TabItem label="npm">
+    ```bash 
+    npm install -g @fiberplane/mcp-gateway 
+    ```
+  </TabItem>
+  <TabItem label="pnpm">
+    ```bash 
+    pnpm add -g @fiberplane/mcp-gateway 
+    ```
+  </TabItem>
+  <TabItem label="bun">
+  ```bash
+   bun add -g @fiberplane/mcp-gateway 
+   ```
+   </TabItem>
+</Tabs>
+
+Alternatively, the mcp-gateway runs directly from its [repository](https://github.com/fiberplane/mcp-gateway)
+More details [here](https://github.com/fiberplane/mcp-gateway?tab=readme-ov-file#alternatively-you-can-run-the-mcp-gateway-from-the-repo)
+
+### Quickstart
+
+<Steps>
+
+1. **Start the Gateway**:
+
+   ```bash
+   mcp-gateway
+   ```
+
+   - Web UI at `http://localhost:3333/ui` , using the authentication token provided in the terminal output
+   - API server at `http://localhost:3333/api`
+
+2. **Adding an MCP Server via the Web UI**
+
+   - Go to **Manage Servers** in the right sidebar, then click **Add Server**.
+     ![Adding an MCP server via Web UI](/src/assets/adding-mcp-server.png)
+
+   - Fill in the server details
+     ![Form to add an MCP server](/src/assets/add-mcp-server-form.png)
+
+3. **Connect MCP client**
+
+   Connect the MCP client through the gateway. For example for Claude:
+
+   ```
+   claude mcp add --transport http "linear-mcp" \
+   "http://localhost:3333/s/linear-mcp/mcp"
+   ```
+
+4. **Viewing Activity Logs**
+
+   View requests, responses, timing, and token usage in real-time via the Web UI
+   ![MCP server logs](/src/assets/mcp-server-logs.png)
+
+</Steps>
+
+## Next Steps
+
+- [**Reference**](/mcp-gateway/reference#cli) - CLI, storage, API, and all technical details
