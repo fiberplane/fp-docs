@@ -5,14 +5,26 @@ description: Create a review for an MCP server
 
 import { Steps } from "@astrojs/starlight/components";
 
-MCP servers interact with LLMs through tool calls and context exchanges—each consuming tokens that impact costs and performance. This includes tool descriptions, naming conventions, and the data exchanged during interactions. Regular reviews help you:
+Reviews analyze MCP server design quality across four dimensions:
 
-- **Monitor Token Consumption**: Understand how much context a MCP server add to conversations and identify optimization opportunities
-- **Control Costs**: Token usage translates directly to API costs. Reviews reveal which servers are most expensive to run
-- **Optimize Performance**: Identify bottlenecks in custom servers or compare efficiency across external alternatives
-- **Stay Within Context Limits**: Ensure AI agents have sufficient room for reasoning without being overwhelmed by tool metadata
+- **Tool Names**: Naming conventions and clarity
+- **Descriptions & Schemas**: Documentation quality and schema design
+- **Token Efficiency**: Context overhead and optimization opportunities
+- **Tool Selection**: Tool scoping and organization
 
-Whether developing custom MCP servers or integrating external ones, reviews provide the visibility needed to build efficient, cost-effective AI agents.
+Each review provides prioritized recommendations for improvements.
+
+## Report structure
+
+| Section                         | Content                                                  |
+| ------------------------------- | -------------------------------------------------------- |
+| Action Items                    | Prioritized recommendations (high/medium priority)       |
+| Overall Impression              | Executive summary of strengths and critical improvements |
+| Tool Names Analysis             | Naming conventions and consistency evaluation            |
+| Descriptions & Schemas Analysis | Documentation and schema quality assessment              |
+| Token Efficiency Analysis       | Context overhead and optimization opportunities          |
+| Tool Selection Analysis         | Tool scoping and organization patterns                   |
+| The Final Verdict               | Key strengths and critical fixes                         |
 
 ## Create a review
 
@@ -20,16 +32,22 @@ Creating reviews requires adding servers first. See the [Getting Started](/conso
 
 <Steps>
 
-1. **Navigate to Reviews**:
+1. ### Navigate to Review section
 
-2. **Select one of the added servers**
+   Select the MCP Server from the sidebar and open the Review section. The interface displays previous reviews (if available) with the full report on the right and rating overview on the left.
 
-3. **Run the review**
+2. ### Generate review
+
+   Click "New Review" (if no previous reviews exist) or the plus symbol (to add another review). Review generation takes several moments to complete.
+
+3. ### Share review
+
+   Two sharing options are available:
+
+   - Copy as Markdown text for the full report
+   - Share rating overview publicly via URL using the "Share Rating" button (see [example](https://console.fiberplane.com/review/WxM87jN5-DyIYk49z7Y2D))
 
 </Steps>
-## Sharing a review
-
-Click on the share button to get an image to share
 
 ## Limits
 

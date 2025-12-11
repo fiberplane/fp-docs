@@ -1,0 +1,54 @@
+---
+title: Getting Started
+description: Adding an MCP server to Console
+---
+
+import { Steps } from "@astrojs/starlight/components";
+
+Console operates by connecting to MCP servers, which can be hosted locally or remotely. These servers expose [tools](https://modelcontextprotocol.io/docs/learn/server-concepts#tools) (functions callable by LLMs) that enable [Evals](/console/core-functionality/evals/), [Review](/console/core-functionality/review/), and all other Console functionality.
+
+## Prerequisites
+
+A running MCP server with an HTTP streaming endpoint is required. Options include:
+
+- **Quick start**: [Context7](https://mcp.context7.com/mcp) (no authentication/ account required - ideal for testing Fiberplane's Console)
+- **Hosted MCP servers**: For example, Neon, Linear, or Notion
+- **Custom servers**: Self-hosted local or remote implementations
+  - Build custom servers using [mcp-lite](https://github.com/fiberplane/mcp-lite)
+  - Manage multiple servers locally with [mcp-gateway](/mcp-gateway/) (HTTP proxy with Web UI for debugging and routing)
+
+<Steps>
+
+1. ### Add a server
+
+   Click the **+** button next to "Your servers" in the sidebar
+
+2. ### Configure the server connection
+
+   | Field       | Required | Description                                                                                                                                   |
+   | ----------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+   | Server URL  | Yes      | HTTP streaming endpoint (e.g., `http://localhost:3000/mcp` or `https://my-server.com/mcp`). Must end with `/mcp`. Legacy SSE is not supported |
+   | Server Name | No       | Display name in Console                                                                                                                       |
+   | Headers     | No       | Single HTTP header as key-value pair (e.g., `Authorization: Bearer token` for authentication or API keys)                                     |
+
+3. ### Review server status
+
+   After adding the server, the interface navigates to the server overview page, which displays the connection status. If authentication is required, the status indicator will prompt for authentication. Follow the server-specific authentication process (e.g., OAuth redirect). Once the status shows "ready", all available tools will be visible.
+
+4. ### Access server functions
+
+   The server appears in the sidebar with the following options:
+
+   | Function                                          | Description                                                                                                       |
+   | ------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+   | **Overview**                                      | Server configuration, deletion, and review report access                                                          |
+   | **[Evals](/console/core-functionality/evals/)**   | Evaluation creation and management                                                                                |
+   | **[Review](/console/core-functionality/review/)** | Server review execution                                                                                           |
+   | **Tools**                                         | Available [MCP tools](https://modelcontextprotocol.io/docs/learn/server-concepts#tools) with input/output schemas |
+
+</Steps>
+
+## Troubleshooting
+
+- **Connection issues**: Attempt to reconnect the server from the Overview panel.
+- **Authentication failures**: Re-initiate the authentication flow from the server status page.
