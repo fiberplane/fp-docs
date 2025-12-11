@@ -184,6 +184,7 @@ export default defineConfig({
                   label: "Gateway MCP Server",
                   link: "/mcp-gateway/reference#gateway-mcp-server",
                 },
+                { label: "Web UI", link: "/mcp-gateway/reference#web-ui" },
               ],
             },
           ],
