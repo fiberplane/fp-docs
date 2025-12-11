@@ -1,9 +1,9 @@
 ---
-title: Console Overview
-description: Unified gateway for managing and debugging MCP servers
+title: Fiberplane Console
+description: Platform for MCP Server review and evaluation
 ---
 
-Console is a web-based interface hosted by Fiberplane for managing, testing, and optimizing Model Context Protocol (MCP) servers. Accessible via GitHub authentication, Console is designed for developers and product teams to connect to local and remote MCP servers, providing visibility into server behavior, token consumption, and functionality.
+Fiberplane Console is a cloud service for managing, testing, and optimizing Model Context Protocol (MCP) servers. Log in with GitHub, connect remote MCP servers to the platform, and get visibility into server behavior, token impact, and functionality.
 
 ## Key Capabilities
 
@@ -14,4 +14,4 @@ Console is a web-based interface hosted by Fiberplane for managing, testing, and
 
 ## Quick Start
 
-Sign up using a GitHub account and [add an MCP server](/console/getting-started/) by connecting to either a local or remote HTTP streaming endpoint. Once connected, servers appear in the sidebar with access to Overview, Evals, Review, and Tools sections.
+Sign up using a GitHub account and [add an MCP server](/console/getting-started/) by connecting to a remote, streamable-HTTP MCP server. Once connected, servers appear in the sidebar with access to Overview, Evals, Review, and Tools sections.
