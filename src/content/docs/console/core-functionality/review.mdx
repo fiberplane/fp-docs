@@ -1,0 +1,54 @@
+---
+title: Review
+description: Create a review for an MCP server
+---
+
+import { Steps } from "@astrojs/starlight/components";
+
+Reviews analyze MCP server design quality across four dimensions:
+
+- **Tool Names**: Naming conventions and clarity
+- **Descriptions & Schemas**: Documentation quality and schema design
+- **Token Efficiency**: Context overhead and optimization opportunities
+- **Tool Selection**: Tool scoping and organization
+
+Each review provides prioritized recommendations for improvements.
+
+## Report structure
+
+| Section                         | Content                                                  |
+| ------------------------------- | -------------------------------------------------------- |
+| Action Items                    | Prioritized recommendations (high/medium priority)       |
+| Overall Impression              | Executive summary of strengths and critical improvements |
+| Tool Names Analysis             | Naming conventions and consistency evaluation            |
+| Descriptions & Schemas Analysis | Documentation and schema quality assessment              |
+| Token Efficiency Analysis       | Context overhead and optimization opportunities          |
+| Tool Selection Analysis         | Tool scoping and organization patterns                   |
+| The Final Verdict               | Key strengths and critical fixes                         |
+
+## Create a review
+
+Creating reviews requires adding servers first. See the [Getting Started](/console/getting-started/) guide for details on adding servers
+
+<Steps>
+
+1. ### Navigate to Review section
+
+   Select the MCP Server from the sidebar and open the Review section. The interface displays previous reviews (if available) with the full report on the right and rating overview on the left.
+
+2. ### Generate review
+
+   Click "New Review" (if no previous reviews exist) or the plus symbol (to add another review). Review generation takes several moments to complete.
+
+3. ### Share review
+
+   Two sharing options are available:
+
+   - Copy as Markdown text for the full report
+   - Share rating overview publicly via URL using the "Share Rating" button (see [example](https://console.fiberplane.com/review/WxM87jN5-DyIYk49z7Y2D))
+
+</Steps>
+
+## Limits
+
+There is a limit of 5 server reviews per day

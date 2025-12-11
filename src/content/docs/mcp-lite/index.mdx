@@ -1,9 +1,7 @@
 ---
-title: mcp-lite
+title: Overview mcp-lite
 description: A small, fetch-first implementation of the Model Context Protocol (MCP) server APIs.
 ---
-
-# mcp-lite
 
 A small, fetch-first implementation of the Model Context Protocol (MCP) server APIs.
 
@@ -48,10 +46,12 @@ mcp.tool("getWeather", {
   inputSchema: WeatherInputSchema,
   outputSchema: WeatherOutputSchema,
   handler: (args) => ({
-    content: [{
-      type: "text",
-      text: `Weather in ${args.location}: 22°C, sunny`
-    }],
+    content: [
+      {
+        type: "text",
+        text: `Weather in ${args.location}: 22°C, sunny`,
+      },
+    ],
     structuredContent: {
       temperature: 22,
       conditions: "sunny",
