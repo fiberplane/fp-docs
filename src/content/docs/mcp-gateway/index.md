@@ -1,5 +1,5 @@
 ---
-title: Overview
+title: Overview MCP Gateway
 description: Unified gateway for managing and debugging MCP servers
 ---
 

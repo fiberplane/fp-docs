@@ -71,8 +71,30 @@ export default defineConfig({
       ],
       sidebar: [
         {
-          label: "MCP Lite",
+          label: "Console",
           collapsed: false,
+          items: [
+            { label: "Overview", link: "/console" },
+            { label: "Getting Started", link: "/console/getting-started" },
+            {
+              label: "Core Functionality",
+              collapsed: false,
+              items: [
+                {
+                  label: "MCP server review",
+                  link: "/console/core-functionality/review",
+                },
+                {
+                  label: "MCP server evaluation",
+                  link: "console/core-functionality/evals",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          label: "MCP Lite",
+          collapsed: true,
           items: [
             { label: "Overview", link: "/mcp-lite" },
             { label: "Getting Started", link: "/mcp-lite/getting-started" },
@@ -154,15 +176,22 @@ export default defineConfig({
                   link: "/mcp-gateway/reference#authentication",
                 },
                 { label: "Proxy", link: "/mcp-gateway/reference#proxy" },
+                { label: "Storage", link: "/mcp-gateway/reference#storage" },
+
+                { label: "Web UI", link: "/mcp-gateway/reference#web-ui" },
                 { label: "REST API", link: "/mcp-gateway/reference#rest-api" },
                 {
                   label: "Gateway MCP Server",
                   link: "/mcp-gateway/reference#gateway-mcp-server",
                 },
-                { label: "Web UI", link: "/mcp-gateway/reference#web-ui" },
               ],
             },
           ],
+        },
+        {
+          label: "Support",
+          collapsed: true,
+          items: [{ label: "Discord", link: "/support" }],
         },
       ],
     }),

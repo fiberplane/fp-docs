@@ -1,0 +1,36 @@
+---
+title: Review
+description: Create a review for an MCP server
+---
+
+import { Steps } from "@astrojs/starlight/components";
+
+MCP servers interact with LLMs through tool calls and context exchanges—each consuming tokens that impact costs and performance. This includes tool descriptions, naming conventions, and the data exchanged during interactions. Regular reviews help you:
+
+- **Monitor Token Consumption**: Understand how much context a MCP server add to conversations and identify optimization opportunities
+- **Control Costs**: Token usage translates directly to API costs. Reviews reveal which servers are most expensive to run
+- **Optimize Performance**: Identify bottlenecks in custom servers or compare efficiency across external alternatives
+- **Stay Within Context Limits**: Ensure AI agents have sufficient room for reasoning without being overwhelmed by tool metadata
+
+Whether developing custom MCP servers or integrating external ones, reviews provide the visibility needed to build efficient, cost-effective AI agents.
+
+## Create a review
+
+Creating reviews requires adding servers first. See the [Getting Started](/console/getting-started/) guide for details on adding servers
+
+<Steps>
+
+1. **Navigate to Reviews**:
+
+2. **Select one of the added servers**
+
+3. **Run the review**
+
+</Steps>
+## Sharing a review
+
+Click on the share button to get an image to share
+
+## Limits
+
+There is a limit of 5 server reviews per day
