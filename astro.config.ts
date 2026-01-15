@@ -51,14 +51,7 @@ export default defineConfig({
             media: "(prefers-color-scheme: dark)",
           },
         },
-        // Google Analytics
-        {
-          tag: "script",
-          attrs: {
-            src: "https://www.googletagmanager.com/gtag/js?id=G-GEKL1TDFL6",
-            async: true,
-          },
-        },
+
         {
           tag: "script",
           content: `
