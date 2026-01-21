@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "typescript": "^5.9.3",
-    "wrangler": "^4.45.3"
+    "wrangler": "^4.59.1"
   },
   "packageManager": "pnpm@10.20.0"
 }
